@@ -2,4 +2,4 @@
 
 ### Apresentação sobre o Laboratório de Dados para Cidadania Hacker e RHC
 
-[Slides](https://github.com/Edely/edely.github.io/edit/master/index.md) 
+[Slides](https://github.com/Edely/edely.github.io/labcidadania) 
