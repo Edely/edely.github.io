@@ -1,4 +1,8 @@
-## Edely Gomes (em construção)
+## Edely Gomes
+
+Meu nome é Edely Gomes. Sou jornalista de formação e programadora, nascida em Salvador, Bahia.
+
+Atualmente sou membro do Raul Hacker Club e junto com amigos jornalistas criei o [Coletivo Interface](https://www.interface.jor.br)
 
 ### Apresentação sobre o Laboratório de Dados para Cidadania Hacker e RHC
 
