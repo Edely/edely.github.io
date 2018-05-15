@@ -1,0 +1,6 @@
+1. O que é raspagem de dados
+2. Stacks
+    - requests + beautiful soup
+    - selenium webdriver + beautiful soup
+
+
