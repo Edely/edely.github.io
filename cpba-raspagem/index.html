@@ -252,7 +252,7 @@
 	<div class="interno">
 		Div interna com algumas informações.
 		<div class="mais-interno">
-			Div ainda mais interna com outras informações.
+			Div ainda mais interna.
 		</div>
 	</div>
 </div>
@@ -262,34 +262,29 @@
 </code></pre>
 
 					<p class="fragment">Selenium</p>
-<pre class="fragment"><code>ind_elements_by_class_name('interno')
+<pre class="fragment"><code>find_elements_by_class_name('interno')
 </code></pre>
 					</section>
 					<section data-transition="fade-out">
 						<pre><code>
-<div class="externo">
-	Div mãe com elemento filho.
-	<div class="interno">
-		Div interna com algumas informações.
-		<div class="mais-interno">
-			Div ainda mais interna com outras informações.
-		</div>
-	</div>
+<div>
+	<a href="#">Link dentro de div</a>
 </div>
+<p>
+	<a href="#">Link dentro de parágrafo</a>
+</p>
 						</code></pre>
 						<p class="fragment">Beautiful Soup</p>
-<pre class="fragment"><code>find_all("div", class_="interno")
+<pre class="fragment"><code>select("p > a")
 </code></pre>
 
-					<p class="fragment">Selenium</p>
-<pre class="fragment"><code>ind_elements_by_class_name('interno')
+						<p class="fragment">Selenium</p>
+<pre class="fragment"><code>find_elements_by_css_selector("p > a")
 </code></pre>
 					</section>
 					<section data-transition="fade-out">
-						<h3>Exemplos!</h3>
-						<aside class="notes">
-								
-						</aside>
+						<h3>Moral da história:</h3>
+						<p class="fragment">Ter noções de desenvolvimento web é uma mão na roda na hora de raspar dados.</p>
 					</section>
 				</section>
 				<section>
@@ -297,11 +292,42 @@
 						<h3>Projetos Legais Com Raspagem de Dados.</h3>
 					</section>
 					<section>
-						serenata
+						<h5>Serenata de Amor</h5>
+						<a href="https://serenata.ai/" target="_blank">https://serenata.ai/</a>
+						<div class="container" style="width: 100%">
+							<img src="imgs/rosie.png" alt="Rosie" style="width: 80%">
+						</div>
+						
 					</section>
 					<section>
-
+						<h3>Coletivo Interface</h3>
+						<a href="http://interface.jor.br/" target="_blank" style="width:100%; display: block">http://interface.jor.br/</a>
+						<a href="https://github.com/Interface-Jornalismo" target="_blank" style="width:100%; display: block">https://github.com/Interface-Jornalismo</a>
+						<a href="https://www.facebook.com/interface.jor/" target="_blank" style="width:100%; display: block">https://www.facebook.com/interface.jor/</a>
+						<div class="container" style="width: 100%">
+							<img src="imgs/interfa.png" alt="Coletivo Interface" style="width: 80%">
+						</div>
 					</section>
+					<section>
+						<h3>Custo Parlamentar</h3>
+						<a href="https://deputados-da-bahia.herokuapp.com/" target="_blank">
+							https://deputados-da-bahia.herokuapp.com/</a>
+						<div class="container" style="width: 100%">
+							<img src="imgs/custo_parlamentar.png" alt="Custo Parlamentar" style="width: 80%">
+						</div>
+					</section>
+				</section>
+				<section>
+					<h3>Contatos</h3>
+					<p>Email: edely.gomes@gmail.com</p>
+					<p>Twitter: @edelyla</p>
+					<p>Github: <a href="https://github.com/Edely" target="_blank">https://github.com/Edely</a></p>
+				</section>
+				<section>
+					<p>Os slides estão disponíveis em: <a href="https://edely.github.io/cpba-raspagem" target="_blank">https://edely.github.io/cpba-raspagem</a></p>
+				</section>
+				<section>
+					<h1>Obrigada!</h1>
 				</section>
 			</div>
 		</div>
