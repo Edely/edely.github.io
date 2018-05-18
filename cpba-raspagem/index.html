@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introdução à Raspagem de Dados</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+			/* .present{
+				height: 100%;
+			} */
+		</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body data-background-transition="fade">
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="fade-out">
+					<h3>Introdução à Raspagem de Dados</h3>
+				</section>
+
+				<section data-transition="fade-out">
+					<h3>Quem eu sou:</h3>
+					<ul>
+						<li>Jornalista/Programadora</li>
+						<li>Membro do Raul Hacker Club</li>
+						<li>Membro do Coletivo Interface</li>
+						<li><a href="https://edely.github.io/" target="_blank">https://edely.github.io/</a></li>
+					</ul>					
+				</section>
+				<section data-transition="fade-out">
+					<h3>Nossa Trilha</h3>
+					<ol>
+						<li>O que é raspagem de dados / webscraping?</li>
+						<li>Como eu posso começar?</li>
+						<li>Projetos Legais Com Raspagem de Dados.</li>
+					</ol>
+					<aside class="notes">
+						Esta é a trilha que vamos seguir para falar de raspagem de dados hoje.
+					</aside>
+				</section>
+				<section data-transition="fade-out">
+					<section data-transition="fade-out">
+						<h3>O que é raspagem de dados / webscraping?</h3>
+						<p>Raspagem de dados (ou colheita / extração de dados) é a técnica de extrair dados de websites.</p>
+					</section>
+					<section data-transition="fade-out">
+						<blockquote>O triste caso da jornalista e do site da Assembleia Legislativa da Bahia</blockquote>
+						<img src="imgs/woman_tired.jpg" alt="Alba">
+					</section>
+					<section data-transition="fade-out">				
+						<p><a href="http://www.al.ba.gov.br/transparencia/prestacao-de-contas" target="_blank">http://www.al.ba.gov.br/transparencia/prestacao-de-contas</a></p>
+						<img style="width:50%"src="imgs/alba.jpeg" alt="Alba">
+						<aside class="notes">
+							- Em junho de 2013, comecei a
+							- Comecei a companhar os dados de prestação de contas dos deputados da alba.
+							- Neste site os deputados eles prestam contas dos gastos que tiveram com a atividade parlamentar e de acordo com a lei "++++" eles podem pedir ressarcimento destes gastos, pois é um gasto que ele teve no exercicio da função.
+							- Isso gerou o meu interesse. Nossa. Dá muio pano de manga.
+							- Entou pensei. Pô vou copiar esses dados!
+							- Na época, eu ainda não sabia programar. Tinha uma noção muito vaga do que era programação, raspagem de dados.
+							- Então para colher esses dados, td era feito na base do...
+						</aside>
+					</section>
+					<section data-transition="fade-out">				
+						<img style="width:50%"src="imgs/ctrl_c_ctrl_v.jpg" alt="Alba">
+						<aside class="notes">
+							- Vou copiar na mão.
+							- 
+							- ... ctrl + c , ctrl + v
+							- ... só que tem um probleminha...
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<h3>Categorias de Gastos da Alba</h3>
+						<ul>
+							<li class="fragment">Aquisição ou locação de software; serviços postais  e de segurança; assinaturas de publicações; TV a cabo ou similar; acesso à Internet; e locação de móveis e equipamentos. Telefones.</li>
+							<li class="fragment">Aluguel  de imóveis para escritório; despesas concernentes a eles</li>
+							<li class="fragment">Locomoção, hospedagem</li>
+							<li class="fragment">Divulgação da  atividade parlamentar</li>
+							<li class="fragment">Aquisição de material de expediente</li>
+							<li class="fragment">Consultorias, assessorias, pesquisas  e trabalhos técnicos</li>
+						</ul>
+						<aside class="notes">
+							- ... ou um problemão!
+							- Vc fazia a consulta por mês e ano.
+							- Vc poderia selecionar uma categoria de gasto especifica ou pedir td geral.
+							- O que isso trazia? Seis dados diferentes por categoria, mais o total reembolsado e o total informado.
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<h3>O Tamanho do Problema</h3>
+						<ul>
+							<li class="fragment">70 deputados</li>
+							<li class="fragment">6 categorias + Total Reembolsado e Apresentado</li>
+							<li class="fragment">12 meses</li>
+							<li class="fragment">8 anos</li>
+						</ul>
+						<aside class="notes">
+							 - Veja que nós tínhamos na época cerca de 70 deputados, entre aqueles que estavam cumprindo o mandato e os que já tinham terminado.
+							 - Destes, mensalmente eles poderiam pedir reembolso em seis categorias. 
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<h3>53760 dados!!</h3>						
+						<aside class="notes">
+							- Vamos copiar né! Vamos...
+							- Comecei a copiar estes dados. Na mão. Eventualmente, uma amiga se juntou a mim e a gente foi copiando...
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<p><i>... esse seria o fim da história, não fosse por...</i></p>
+						<aside class="notes">
+							- Após muito copiar eu e uma amiga jornalistas vimos que era impraticável copiar os dados na mão.
+							- Estávamos cometendo erros na cópia dos dados.
+							- Decidimos procurar uma maneira mais efetiva de copiar estes dados.
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<img style="width: 70%" src="imgs/python_hero.jpeg" alt="Python Hero">
+						<p style="font-size: 10px"><i><a href="https://medium.com/@kristinekburnett/zero-to-hero-with-python-professional-python-programmer-bundle-2aabf50ce04b" target="_blank">Crédito da Imagem: Zero to Hero with Python Professional Python </a></i></p>
+						<aside class="notes">
+							- Foi aí que comecei a programar Python
+							- Comecei a escrever um script para raspar os dados da alba							
+						</aside>
+					</section>
+				</section>
+				<section data-transition="fade-out">
+					<section data-transition="fade-out">
+						<h3>Como eu posso começar?</h3>
+					</section>
+					<section data-transition="fade-out">
+						<h3>Escolha Uma Linguagem de Programação</h3>
+						<aside class="notes">
+							- Eu acredito que é possível raspar dados com qqr lgg de programação
+							- Já vi exemplos de pessoas raspando dados com Java... C... JavaScript...
+							- Mas o fato é que a lgg mais 'adequadas' para esse tipo de tarefa
+						</aside>	
+					</section>
+					<section data-transition="fade-out">
+						<img src="imgs/r-vs-python-blog.jpg" alt="R vs Python">
+						<aside class="notes">
+							- Há uma discussão saudável sobre qual a melhor lgg para análise e raspagem de Dados
+							- R tem um Background Estatístico. É uma derivação de uma outra lgg chamda S. É boa para cálculos e plotagem de gráficos.
+							- Python é uma lgg de propósito mais geral
+						</aside>	
+					</section>
+					<section data-transition="fade-out">
+						<div class="container" style="width:90%">
+							<img src="imgs/logo_scrapy.png" alt="Logo Scrapy" style="width: 25%">
+							<img src="imgs/bs4.jpg" alt="Beautiful Soup 4" style="width: 25%">
+							<img src="imgs/requests-sidebar.png" alt="Requests" style="width: 25%">
+							<img src="imgs/selenium.png" alt="Selenium" style="width: 25%">
+						</div>
+						<aside class="notes">
+							Scrapy:
+							- Deixe dizer de antemão: Nunca usei o Scrapy, mas acho que devo. Ele é mais robusto que as demais ferramentas que vou postar aqui. Tá na minha lista.
+							- Ele é mais robusto. Coisas que eu preciso combinar em duas bibliotecas, ele faz por si só.
+							- E o mais importante: é possível agendar os spiders.
+
+							Requests:
+							- É uma biblioteca para fazer requisições http
+
+							Beautiful Soup:
+							- É uma biblioteca para parsear html ou xml
+
+							Selenium
+							- É uma ferramenta para automatizar ações em browsers
+						</aside>
+					</section>					
+					<section data-transition="fade-out">
+						<img src="imgs/alba.jpeg" alt="Alba">
+						<aside class="notes">
+							- Para quem não tá familiarizado com desenvolvimento web. Quando vc abre uma página num navegador, na verdade aquilo é um documento, escrito com uma lgg de marcação. Como assim. É uma linguagem que permite que vc agrupe textos, imagens, multimidia em tags, que para todos os efeitos vamos chamar de caixinhas.
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<img src="imgs/alba_print.png" alt="Print da Alba">
+						<aside class="notes">
+							- Veja o título "Transparência / Prestação de Contas"
+							- Um tem azul claro e o outro escuro, pq foram colocados dentro de tags diferentes e regras diferentes foram aplicadas nessas caixas.
+						</aside>
+					</section>		
+					<section data-transition="fade-out">
+						<img src="imgs/alba_print_destaques.png" alt="Print da Alba">
+					</section>					
+					<section data-transition="fade-out">
+						<img src="imgs/alba_print_destaques_bg.png" alt="Print da Alba">
+						<aside class="notes">
+							- Todas as informações no site estão dentro de tags. E tags estão dentro de tags. A tag que contem todos as outras tags é a body.
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<img src="imgs/web_inspect_um.png" alt="Print da Alba">
+					</section>
+					<section data-transition="fade-out">
+						<img src="imgs/web_inspect.png" alt=" Web inspect Alba">
+						
+					</section>
+					<section data-transition="fade-out">
+						<h3>Por que é importante saber isso?</h3>
+						<aside class="notes">
+							- Pq é imporante saber isso?
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<h3>Por causa dos seletores!</h3>
+						<aside class="notes">
+							- No desenvolvimento web, os seletores servem para identificar as tags que queremos modificar. As tags se relacionam entre si. Podem estar uma dentro das outras, uma ao lado da outra. Tags podem ter classes, que é como se nós déssemos nomes para as tags.
+
+							- As mesmas regras que nós utilizamos para selecionar e modificar as tags, atribuindo características, nós podemos utilizar para extrair informações com raspagem de dados
+
+							- Essas bibliotecas voltadas para raspagem de dados ou apenas interação com o navegador, tem métodos ou funções que utilizam os seletores para selecionar um elemento ou outro.
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<h3>Exemplos!</h3>
+						<aside class="notes">
+
+						</aside>
+					</section>
+					<section data-transition="fade-out">
+						<pre><code>
+<p>Texto Num Parágrafo</p>
+<h1>Texto num header</h1>
+<p>Texto Em Outro Parágrafo</p>
+						</code></pre>
+						<p class="fragment">Beautiful Soup</p>
+<pre class="fragment"><code>find_all('p')
+</code></pre>
+
+					<p class="fragment">Selenium</p>
+<pre class="fragment"><code>find_elements_by_tag_name('p')
+</code></pre>
+					</section>
+					<section data-transition="fade-out">
+						<pre><code>
+<div class="externo">
+	Div mãe com elemento filho.
+	<div class="interno">
+		Div interna com algumas informações.
+		<div class="mais-interno">
+			Div ainda mais interna.
+		</div>
+	</div>
+</div>
+						</code></pre>
+						<p class="fragment">Beautiful Soup</p>
+<pre class="fragment"><code>find_all("div", class_="interno")
+</code></pre>
+
+					<p class="fragment">Selenium</p>
+<pre class="fragment"><code>find_elements_by_class_name('interno')
+</code></pre>
+					</section>
+					<section data-transition="fade-out">
+						<pre><code>
+<div>
+	<a href="#">Link dentro de div</a>
+</div>
+<p>
+	<a href="#">Link dentro de parágrafo</a>
+</p>
+						</code></pre>
+						<p class="fragment">Beautiful Soup</p>
+<pre class="fragment"><code>select("p > a")
+</code></pre>
+
+						<p class="fragment">Selenium</p>
+<pre class="fragment"><code>find_elements_by_css_selector("p > a")
+</code></pre>
+					</section>
+					<section data-transition="fade-out">
+						<h3>Moral da história:</h3>
+						<p class="fragment">Ter noções de desenvolvimento web é uma mão na roda na hora de raspar dados.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Projetos Legais Com Raspagem de Dados.</h3>
+					</section>
+					<section>
+						<h5>Serenata de Amor</h5>
+						<a href="https://serenata.ai/" target="_blank">https://serenata.ai/</a>
+						<div class="container" style="width: 100%">
+							<img src="imgs/rosie.png" alt="Rosie" style="width: 80%">
+						</div>
+						
+					</section>
+					<section>
+						<h3>Coletivo Interface</h3>
+						<a href="http://interface.jor.br/" target="_blank" style="width:100%; display: block">http://interface.jor.br/</a>
+						<a href="https://github.com/Interface-Jornalismo" target="_blank" style="width:100%; display: block">https://github.com/Interface-Jornalismo</a>
+						<a href="https://www.facebook.com/interface.jor/" target="_blank" style="width:100%; display: block">https://www.facebook.com/interface.jor/</a>
+						<div class="container" style="width: 100%">
+							<img src="imgs/interfa.png" alt="Coletivo Interface" style="width: 80%">
+						</div>
+					</section>
+					<section>
+						<h3>Custo Parlamentar</h3>
+						<a href="https://deputados-da-bahia.herokuapp.com/" target="_blank">
+							https://deputados-da-bahia.herokuapp.com/</a>
+						<div class="container" style="width: 100%">
+							<img src="imgs/custo_parlamentar.png" alt="Custo Parlamentar" style="width: 80%">
+						</div>
+					</section>
+				</section>
+				<section>
+					<h3>Contatos</h3>
+					<p>Email: edely.gomes@gmail.com</p>
+					<p>Twitter: @edelyla</p>
+					<p>Github: <a href="https://github.com/Edely" target="_blank">https://github.com/Edely</a></p>
+				</section>
+				<section>
+					<p>Os slides estão disponíveis em: <a href="https://edely.github.io/cpba-raspagem" target="_blank">https://edely.github.io/cpba-raspagem</a></p>
+				</section>
+				<section>
+					<h1>Obrigada!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
