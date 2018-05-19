@@ -1,0 +1,12 @@
+1. O que é raspagem de dados
+    1.1 Definição
+    1.2 Exemplos
+    1.3 Linguagens
+
+2. Stacks
+    - requests + beautiful soup
+    - selenium webdriver + beautiful soup
+
+3. API
+    - No mundo ideal, existiria uma api em todos os sites que vc quisesse raspar
+
