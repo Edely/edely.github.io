@@ -11,3 +11,7 @@ Atualmente sou membro do Raul Hacker Club e junto com amigos jornalistas criei o
 ### Apresentação sobre Raspagem de Dados na Campus Party Bahia
 
 [Slides](https://edely.github.io/cpba-raspagem) 
+
+### Apresentação sobre Democracia e Tecnologia na Campus Party Bahia
+
+[Slides](https://edely.github.io/cpba-pyladies) 
