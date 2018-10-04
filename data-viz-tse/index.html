@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-6">Eleições 2018 </h1>
+            <p class="lead">Dados Estaduais do Eleitorado e Candidatos da Bahia</p>
+            <hr class="my-4">
+            <p>Comparativo entre o perfil dos <a href="http://www.tse.jus.br/hotsites/pesquisas-eleitorais/candidatos.html" target="_blank">candidatos baianos</a> e do <a href="http://www.tse.jus.br/hotsites/pesquisas-eleitorais/eleitorado.html" target="_blank">eleitorado na Bahia</a>, com base no <a href="http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais-1/repositorio-de-dados-eleitorais" target="_blank">repositório de dados eleitorais do Tribunal Superior Eleitoral</a>. Referente a 2018, a pesquisa disponibiliza os dados de 4.181.292 eleitores. Destes, 298663 são do estado da Bahia.</p>            
+        </div>
+        <div class="row">
+            <h2 class="col-12">Gênero</h2>
+            <div id="genero" class="col-12 col-sm-6" data-graph="genero">                
+                <div class='error-div'> <p  class='error-text'>Não Foi Possível Carregar Gráfico</p></div>  
+                <div class="graph-container">
+                    <h3>Candidatos</h3>
+                    <div class="canvas-subtitle">
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference mulheres"></span>
+                            <p class="canvas-subtitle-text">(372) Mulheres - 31.63% </p>
+                        </div>
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference homens"></span>
+                            <p class="canvas-subtitle-text">(824) Homens - 70.06%</p>
+                        </div>
+                    </div>
+                    <div class="canvas-space">
+                        <svg width="100%"></svg>
+                    </div>                    
+                </div>                  
+            </div> 
+            <div id="genero-eleitorado" class="col-12 col-sm-6" data-graph="genero-eleitorado">
+                <div class='error-div'> <p  class='error-text'>Não Foi Possível Carregar Gráfico</p></div>  
+                <div class="graph-container">
+                    <h3>Eleitores</h3>
+                    <div class="canvas-subtitle">
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference mulheres"></span>
+                            <p class="canvas-subtitle-text">Mulheres - 52.35%</p>
+                        </div>
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference homens"></span>
+                            <p class="canvas-subtitle-text">Homens - 46.95%</p>
+                        </div>
+                        
+                    </div>
+                    <div class="canvas-space">
+                        <svg width="100%"></svg>
+                    </div>                    
+                    <div class="canvas-subtitle-item">
+                        <span>* </span> <span class="canvas-subtitle-reference nao-informado"></span>
+                        <p class="canvas-subtitle-text">0.69% Não Informado</p>
+                    </div>
+                </div>                  
+            </div>  
+        </div>  
+        <div class="row">      
+
+            <h2 class="col-12">Escolaridade</h2>
+            <div id="escolaridade-candidatos" class="col-12 col-sm-6" data-graph="escolaridade-candidatos">
+                <div class='error-div'> <p  class='error-text'>Não Foi Possível Carregar Gráfico</p></div>  
+                <div class="graph-container">
+                    <h3>Candidatos</h3>
+                    <div class="canvas-subtitle">
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference mulheres"></span>
+                            <p class="canvas-subtitle-text">31.63% de Candidatas Mulheres (372)</p>
+                        </div>
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference homens"></span>
+                            <p class="canvas-subtitle-text">70.06% de Candidatos Homens (824)</p>
+                        </div>
+                    </div>
+                    <div class="canvas-space">
+                        <svg width="100%"></svg>
+                    </div>                    
+                </div>                  
+            </div>  
+
+            <div id="escolaridade-eleitores" class="col-12 col-sm-6" data-graph="escolaridade-eleitores">
+                <div class='error-div'> <p  class='error-text'>Não Foi Possível Carregar Gráfico</p></div>  
+                <div class="graph-container">
+                    <h3>Eleitores</h3>
+                    <div class="canvas-subtitle">
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference mulheres"></span>
+                            <p class="canvas-subtitle-text">31.63% de Candidatas Mulheres (372)</p>
+                        </div>
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference homens"></span>
+                            <p class="canvas-subtitle-text">70.06% de Candidatos Homens (824)</p>
+                        </div>
+                    </div>
+                    <div class="canvas-space">
+                        <svg width="100%"></svg>
+                    </div>                    
+                </div>                  
+            </div>                  
+        </div>  
+        <div class="row"> 
+            <div id="etnia-candidatos" class="col-12 col-sm-6" data-graph="etnia-candidatos">
+                
+                <h2>Etnia dos Candidatos</h2>
+                <div class='error-div'> <p  class='error-text'>Não Foi Possível Carregar Gráfico</p></div>  
+                <div class="graph-container">
+                    <h3>Total: 1176</h3>
+                    <div class="canvas-subtitle">
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference mulheres"></span>
+                            <p class="canvas-subtitle-text">31.63% de Candidatas Mulheres (372)</p>
+                        </div>
+                        <div class="canvas-subtitle-item">
+                            <span class="canvas-subtitle-reference homens"></span>
+                            <p class="canvas-subtitle-text">70.06% de Candidatos Homens (824)</p>
+                        </div>
+                    </div>
+                    <div class="canvas-space">
+                        <svg width="100%"></svg>
+                    </div>                    
+                </div>                  
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700');
+
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.canvas-space{
+    padding: 10px;
+}
+
+.canvas-subtitle-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.canvas-subtitle-reference {
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    background: #ccc;
+}
+
+.canvas-subtitle-text{
+    margin-bottom: 0;
+}
+#genero-eleitorado .canvas-subtitle-reference.mulheres,
+#genero .canvas-subtitle-reference.mulheres{
+    background-color: #E84855;
+}
+
+#genero-eleitorado .canvas-subtitle-reference.homens,
+#genero .canvas-subtitle-reference.homens{
+    background-color: #2B3A67;
+}
+
+#genero-eleitorado .canvas-subtitle-reference.nao-informado,
+#genero .canvas-subtitle-reference.nao-informado{
+    background-color: #222;
+}
+
+/*['#2B3A67', '#E84855']*/
+.error-div{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+[data-graph].not-loaded .graph-container{
+    display: none;
+}
+
+[data-graph].not-loaded .error-div{
+    display: flex;
+}
