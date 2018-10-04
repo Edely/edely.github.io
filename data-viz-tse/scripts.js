@@ -18,9 +18,9 @@ var treatData = function(rawData, typeData){
 
         //{"ENSINO MÉDIO INCOMPLETO": 46, "LÊ E ESCREVE": 4, "SUPERIOR INCOMPLETO": 116, "ENSINO FUNDAMENTAL INCOMPLETO": 37, "ENSINO MÉDIO COMPLETO": 396, "SUPERIOR COMPLETO": 562, "ENSINO FUNDAMENTAL COMPLETO": 35, "Nome": "Grau de Instrução"}
 
-        var ensMedio = rawData["ENSINO MÉDIO INCOMPLETO"] ? rawData["ENSINO MÉDIO INCOMPLETO"] : 0;  
+        var medioIncompleto = rawData["ENSINO MÉDIO INCOMPLETO"] ? rawData["ENSINO MÉDIO INCOMPLETO"] : 0;  
         var leEscreve = rawData["LÊ E ESCREVE"] ? rawData["LÊ E ESCREVE"] : 0;  
-        var supCompleto = rawData["SUPERIOR INCOMPLETO"] ? rawData["SUPERIOR INCOMPLETO"] : 0;  
+        var supIncompleto = rawData["SUPERIOR INCOMPLETO"] ? rawData["SUPERIOR INCOMPLETO"] : 0;  
         var funIncompleto = rawData["ENSINO FUNDAMENTAL INCOMPLETO"] ? rawData["ENSINO FUNDAMENTAL INCOMPLETO"] : 0;  
         var medioCompleto = rawData["ENSINO MÉDIO COMPLETO"] ? rawData["ENSINO MÉDIO COMPLETO"] : 0;  
         var supCompleto = rawData["SUPERIOR COMPLETO"] ? rawData["SUPERIOR COMPLETO"] : 0;  
@@ -29,9 +29,9 @@ var treatData = function(rawData, typeData){
 
         var analfabeto = rawData["ANALFABETO"] ? rawData["ANALFABETO"] : 0;
 
-        var dadosObj = [{ graph: "Grau de Escolaridade dos Candidatos", ensMedio: ensMedio, leEscreve: leEscreve, supCompleto: supCompleto, funIncompleto:funIncompleto , medioCompleto: medioCompleto, supCompleto:supCompleto, funCompleto:funCompleto, analfabeto:analfabeto }];
+        var dadosObj = [{ graph: "Grau de Escolaridade", supCompleto: supCompleto,  medioCompleto: medioCompleto, medioIncompleto: medioIncompleto, funCompleto:funCompleto, funIncompleto:funIncompleto, supIncompleto:supIncompleto, leEscreve: leEscreve ,analfabeto:analfabeto }];
         
-        var treatedData=['ensMedio','leEscreve', 'supCompleto', 'funIncompleto', 'medioCompleto', 'supCompleto', 'funCompleto', 'analfabeto'].map(function(key,i){
+        var treatedData=['supCompleto', 'supIncompleto', 'medioCompleto', 'medioIncompleto','funCompleto', 'funIncompleto','leEscreve', 'analfabeto'].map(function(key,i){
             return dadosObj.map(function(d,j){
                 return {x: d['graph'], y: d[key] };
             })
@@ -41,16 +41,6 @@ var treatData = function(rawData, typeData){
 
     return(treatedData);
 }
-
-
-// .dark-primary-color    { background: #D32F2F; }
-// .default-primary-color { background: #F44336; }
-// .light-primary-color   { background: #FFCDD2; }
-// .text-primary-color    { color: #FFFFFF; }
-// .accent-color          { background: #FF5252; }
-// .primary-text-color    { color: #212121; }
-// .secondary-text-color  { color: #757575; }
-// .divider-color         { border-color: #BDBDBD; }
 
 
 var drawStackedGraph = function(data, selector, colorTheme){
@@ -69,10 +59,10 @@ var drawStackedGraph = function(data, selector, colorTheme){
         var colorRange = ['#2B3A67', '#E84855', "#222"];
     }
     if(colorTheme == "escolaridade"){
-        var colorRange = ["#D32F2F", "#F44336", "#FFCDD2", "#FF5252", "#212121", "#757575", "#BDBDBD"];
+        var colorRange = ["#D32F2F", "#F44336", "#FFCDD2", "#FF5252", "#212121", "#757575", "#BDBDBD", "D32F2F", "#F5A4A4"];
     }
     if(colorTheme == "etnia"){
-        var colorRange = ["#D32F2F", "#F44336", "#FFCDD2", "#FF5252", "#212121", "#757575", "#BDBDBD"];
+        var colorRange = ["#D32F2F", "#F8BBD0", "#7B1FA2", "#512DA8", "#303F9F", "#1976D2", "#00796B"];
     }
     
     

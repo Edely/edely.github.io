@@ -6,6 +6,8 @@
 
 .canvas-space{
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .canvas-subtitle-item{
@@ -56,4 +58,36 @@
 
 [data-graph].not-loaded .error-div{
     display: flex;
+}
+
+
+/* ["#D32F2F", "#F8BBD0", "#7B1FA2", "#512DA8", "#303F9F", "#1976D2", "#00796B"];*/
+.med-incompleto{
+    background-color: rgb(255, 82, 82);
+}
+
+.analfabeto{
+    background-color: rgb(245, 164, 164);
+}
+
+.le-escreve{
+background-color: rgb(189, 189, 189);
+}
+.fun-completo{
+    background-color: rgb(33, 33, 33);
+}
+
+.fun-incompleto{
+    background-color: rgb(117, 117, 117);
+}
+
+.sup-incompleto{
+    background-color: rgb(244, 67, 54);
+}
+.sup-completo{
+    background-color: rgb(211, 47, 47)
+}
+
+.med-completo{
+    background-color: rgb(255, 205, 210);
 }
